@@ -8,19 +8,17 @@ namespace IntegrationTests.Factories
     public class ExampleAppFactory : WebApplicationFactory<Program>, IAsyncLifetime
     {
         public HttpClient Client { get; private set; } = default!;
-        public ExampleAppFactory()
-        {
-            Client = Server.CreateClient();
-        }
-
+  
         public Task InitializeAsync()
         {
+            Client = CreateClient();
             Console.WriteLine("InitializeAsync hit.");
             return Task.CompletedTask;
         }
 
         Task IAsyncLifetime.DisposeAsync()
         {
+            Client.Dispose();
             Console.WriteLine("DisposeAsync hit.");
             return Task.CompletedTask;
         }

@@ -5,7 +5,7 @@ using System.Text.Json;
 namespace IntegrationTests
 {
     [Collection(nameof(TestCollection))]
-    public class Tests1 : IClassFixture<ExampleAppFactory>
+    public class Tests1 
     {
         private readonly ExampleAppFactory _factory;
         

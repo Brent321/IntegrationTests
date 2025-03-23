@@ -8,7 +8,7 @@
 
     <ItemGroup>
         <InternalsVisibleToSuffix Include="IntegrationTests" />
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.3" />
     </ItemGroup>
 
 </Project>
